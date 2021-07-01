@@ -1,0 +1,17 @@
+.button{
+    padding: 0.5rem;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    color: rgb(236, 154, 154);
+    width: 20%;
+    border:none;
+    cursor: pointer;
+}
+
+button:hover,
+button:active {
+    background-color: #5a1a01;
+    border-color: #5a1a01;
+    color: white;
+
+}    
