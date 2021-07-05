@@ -7,6 +7,7 @@ import Products from './pages/Products';
 import MainHeader from './components/MainHeader';
 import ProductDetails from './pages/ProductDetails';
 import Home from './pages/Home';
+import Countries from './pages/Countries';
 
 function App() {
   const ctx = useContext(Authentication);
@@ -17,7 +18,10 @@ function App() {
       <main>
         <Switch>
         <Route path="/" exact>
-            <Redirect to="/home"/>
+            <Redirect to="/countries"/>
+          </Route>
+          <Route path="/countries">
+            <Countries/>
           </Route>
           <Route path="/home">
             <Home/>
@@ -31,6 +35,9 @@ function App() {
           { ctx.auth && <Route path="/products/:productId">
             <ProductDetails/>
           </Route>}
+          <Route path="*">
+            <Redirect to="/home"/>
+          </Route>
         </Switch>  
       </main>
       

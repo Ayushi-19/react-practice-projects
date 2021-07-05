@@ -1,0 +1,13 @@
+input{
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #5a1a01;
+    width: 50%;
+    border-radius:5px;
+}
+
+label{
+    margin: 5px;
+    font-family: initial;
+    font-weight: bolder;
+}
