@@ -8,6 +8,7 @@ import MainHeader from './components/MainHeader';
 import ProductDetails from './pages/ProductDetails';
 import Home from './pages/Home';
 import Countries from './pages/Countries';
+import DebouncingThrottling from './pages/DebouncingThrottling';
 
 function App() {
   const ctx = useContext(Authentication);
@@ -18,15 +19,18 @@ function App() {
       <main>
         <Switch>
         <Route path="/" exact>
-            <Redirect to="/countries"/>
+            <Redirect to="/welcome"/>
           </Route>
-          <Route path="/countries">
+          <Route path="/pagination">
             <Countries/>
+          </Route>
+          <Route path="/debouncing-throttling">
+            <DebouncingThrottling/>
           </Route>
           <Route path="/home">
             <Home/>
           </Route>
-          { ctx.auth && <Route path="/welcome">
+          {  <Route path="/welcome">
             <Welcome/>
           </Route>}
           { ctx.auth && <Route exact path="/products">
